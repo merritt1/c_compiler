@@ -1,0 +1,4 @@
+loc = 0001:0001-0001:0001     text = c                        token = [IDENTIFIER          ]     name = c
+loc = 0001:0003-0001:0003     text = =                        token = [EQUAL               ]
+loc = 0001:0005-0001:0015     text = "hell\111o"              token = [STRING              ]     val = hell\111o
+loc = 0001:0016-0001:0016     text = ;                        token = [SEMICOLON           ]

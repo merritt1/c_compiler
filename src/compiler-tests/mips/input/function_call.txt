@@ -1,0 +1,15 @@
+void syscall_print_int(int integer);
+
+int b;
+
+void myfunc(void) {
+int a;
+a = 666;
+syscall_print_int(a);
+}
+
+int main(void) {
+myfunc();
+b = 111;
+syscall_print_int(b);
+}

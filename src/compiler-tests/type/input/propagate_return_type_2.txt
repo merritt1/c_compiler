@@ -1,0 +1,8 @@
+int b;
+signed char *(a(void)) {
+return 0;
+}
+signed int (main(void)) {
+b + a();
+}
+

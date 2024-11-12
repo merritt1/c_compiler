@@ -1,0 +1,19 @@
+
+
+
+***ERROR: Function may not return an array or function.
+
+
+=============== PARSE TREE ===============
+signed int (myFunc(void));
+signed int (myFunc(void)) {
+return;
+}
+signed int (main(void)) {
+return myFunc;
+}
+================= SYMBOLS ================
+Symbol Table ID: 0
+  myFunc -> function(signed int, [void])
+  main -> function(signed int, [void])
+

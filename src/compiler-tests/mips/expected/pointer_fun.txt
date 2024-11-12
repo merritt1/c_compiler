@@ -1,0 +1,84 @@
+	.data
+
+	.text
+	.globl main
+main:
+	addiu $sp, $sp, -120
+	sw $fp, 48($sp)
+	or $fp, $sp, $0
+	sw $ra, 52($fp)
+	sw $a0, 0($fp)
+	sw $a1, 4($fp)
+	sw $a2, 8($fp)
+	sw $a3, 12($fp)
+	sw $s0, 16($fp)
+	sw $s1, 20($fp)
+	sw $s2, 24($fp)
+	sw $s3, 28($fp)
+	sw $s4, 32($fp)
+	sw $s5, 36($fp)
+	sw $s6, 40($fp)
+	sw $s7, 44($fp)
+	sw $a1, 108($fp)
+	sw $a2, 112($fp)
+	la $s0, 108($fp)
+	la $s1, 96($fp)
+	sw $s1, 0($s0)
+	la $s2, 96($fp)
+	li $s3, 0
+	li $s4, 4
+	mul $s5, $s3, $s4
+	addu $s6, $s2, $s5
+	li $s7, 6
+	sw $s7, 0($s6)
+	la $t0, 96($fp)
+	li $t1, 1
+	li $t2, 4
+	mul $t3, $t1, $t2
+	addu $t4, $t0, $t3
+	li $t5, 6
+	sw $t5, 0($t4)
+	la $t6, 96($fp)
+	li $t7, 2
+	li $t8, 4
+	mul $t9, $t7, $t8
+	addu $s0, $t6, $t9
+	li $s1, 6
+	sw $s1, 0($s0)
+	la $s2, 108($fp)
+	li $s3, 4
+	lw $s4, 0($s2)
+	addu $s5, $s4, $s3
+	sw $s5, 0($s2)
+	la $s6, 108($fp)
+	lw $s7, 0($s6)
+	li $t0, 9
+	sw $t0, 0($s7)
+	la $t1, 112($fp)
+	li $t2, 0
+	sw $t2, 0($t1)
+_GeneratedLabel_1:
+	la $t3, 112($fp)
+	li $t4, 3
+	lw $t5, 0($t3)
+	slt $t6, $t5, $t4
+	beqz $t6, _GeneratedLabel_2
+	la $t7, 96($fp)
+	la $t8, 112($fp)
+	lw $t9, 0($t8)
+	li $s0, 4
+	mul $s1, $t9, $s0
+	addu $s2, $t7, $s1
+	lw $s3, 0($s2)
+	or $a0, $s3, $0
+	li $v0,1
+	syscall
+	la $s4, 112($fp)
+	li $s5, 1
+	lw $s6, 0($s4)
+	addu $s7, $s6, $s5
+	sw $s7, 0($s4)
+	b _GeneratedLabel_1
+_GeneratedLabel_2:
+	li $v0,10
+	syscall

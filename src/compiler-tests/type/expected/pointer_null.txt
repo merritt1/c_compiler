@@ -1,0 +1,12 @@
+=============== PARSE TREE ===============
+signed int (main(void)) {
+signed int (*(p));
+((signed int(*)) 0==p);
+}
+================= SYMBOLS ================
+Symbol Table ID: 0
+  main -> function(signed int, [void])
+
+Symbol Table ID: 1
+  p -> pointer(signed int)
+

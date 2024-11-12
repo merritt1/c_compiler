@@ -1,0 +1,20 @@
+void syscall_print_int(int i);
+void syscall_print_string(char *string);
+
+int main(void) {
+int b;
+b = 666;
+syscall_print_int(&b);
+syscall_print_string("\n");
+  {
+  int a;
+  syscall_print_int(&a);
+  syscall_print_string("\n");
+  }
+  {
+  int c;
+  syscall_print_int(&c);
+  syscall_print_string("\n");
+  }
+}
+

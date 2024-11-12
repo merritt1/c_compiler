@@ -1,0 +1,14 @@
+
+
+
+***ERROR: Reference to undefined identifier 'a'
+
+
+=============== PARSE TREE ===============
+signed int (main(void)) {
+return a;
+}
+================= SYMBOLS ================
+Symbol Table ID: 0
+  main -> function(signed int, [void])
+

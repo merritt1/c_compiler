@@ -1,0 +1,7 @@
+void syscall_print_int(int integer);
+int c[2];
+
+void main(void) {
+	c[0] = 8989;
+	syscall_print_int(c[0]);
+}

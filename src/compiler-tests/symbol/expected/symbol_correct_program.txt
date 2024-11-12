@@ -1,0 +1,44 @@
+=============== PARSE TREE ===============
+signed int (i);
+signed int (*(p)[10](signed int, signed char));
+unsigned char (uc);
+signed long int (li);
+signed int (*(r));
+unsigned char (*(pp));
+signed int (a[20]);
+signed int (*(aa[30][20]));
+signed int (*(aaa[10])[50]);
+signed char (f(signed int (i), signed int (*(p))));
+signed char (aaaa), (*(b)), (c[10]);
+signed int (abc(signed char (f))) {
+signed short int (firstfunction);
+first:
+    b;
+goto first;
+(f+i);
+(f++);
+}
+================= SYMBOLS ================
+Symbol Table ID: 0
+  i -> signed int
+  p -> pointer(array(10, function(signed int, [signed int, signed char])))
+  uc -> unsigned char
+  li -> signed long int
+  r -> pointer(signed int)
+  pp -> pointer(unsigned char)
+  a -> array(20, signed int)
+  aa -> array(30, array(20, pointer(signed int)))
+  aaa -> array(10, pointer(array(50, signed int)))
+  f -> function(signed char, [signed int, pointer(signed int)])
+  aaaa -> signed char
+  b -> pointer(signed char)
+  c -> array(10, signed char)
+  abc -> function(signed int, [signed char])
+
+Symbol Table ID: 1
+  f -> signed char
+  firstfunction -> signed short int
+
+Symbol Table ID: 2
+  first -> label
+

@@ -1,0 +1,13 @@
+=============== PARSE TREE ===============
+unsigned int (a);
+signed long int (c);
+signed int (main(void)) {
+((unsigned long int) a+(unsigned long int) c);
+((unsigned long int) c+(unsigned long int) a);
+}
+================= SYMBOLS ================
+Symbol Table ID: 0
+  a -> unsigned int
+  c -> signed long int
+  main -> function(signed int, [void])
+

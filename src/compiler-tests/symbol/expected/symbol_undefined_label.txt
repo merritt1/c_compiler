@@ -1,0 +1,36 @@
+
+
+
+***ERROR: Reference to undefined label 'secondlabel' -- searched in Table 4***
+
+
+=============== PARSE TREE ===============
+signed char (b);
+signed int (a(signed char (f))) {
+first:
+    b;
+goto first;
+}
+signed short int (p(signed int (asdf))) {
+second:
+    (b++);
+goto secondlabel;
+}
+================= SYMBOLS ================
+Symbol Table ID: 0
+  b -> signed char
+  a -> function(signed int, [signed char])
+  p -> function(signed short int, [signed int])
+
+Symbol Table ID: 1
+  f -> signed char
+
+Symbol Table ID: 2
+  first -> label
+
+Symbol Table ID: 3
+  asdf -> signed int
+
+Symbol Table ID: 4
+  second -> label
+

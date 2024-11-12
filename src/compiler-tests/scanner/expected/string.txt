@@ -1,0 +1,4 @@
+loc = 0001:0001-0001:0008     text = "sample"                 token = [STRING              ]     val = sample
+loc = 0002:0001-0002:0078     text = "This is a string with some special characters \n39458 ** \b\b 2o34iu^^%$*$()"     token = [STRING              ]     val = This is a string with some special characters \n39458 ** \b\b 2o34iu^^%$*$()
+loc = 0003:0001-0003:0036     text = "string with some single quotes 'a'"     token = [STRING              ]     val = string with some single quotes 'a'
+loc = 0004:0001-0004:0042     text = "string with a /* comment */ inside of it"     token = [STRING              ]     val = string with a /* comment */ inside of it

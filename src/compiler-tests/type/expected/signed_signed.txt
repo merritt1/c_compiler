@@ -1,0 +1,27 @@
+=============== PARSE TREE ===============
+signed char (a);
+signed short int (b);
+signed int (c);
+signed long int (d);
+signed int (main(void)) {
+((signed int) a+(signed int) b);
+((signed int) b+(signed int) a);
+((signed int) a+c);
+(c+(signed int) a);
+((signed long int) a+d);
+(d+(signed long int) a);
+((signed int) b+c);
+(c+(signed int) b);
+((signed long int) c+d);
+(d+(signed long int) c);
+((signed long int) (((signed int) a+(signed int) b)+c)+d);
+(((d+(signed long int) c)+(signed long int) b)+(signed long int) a);
+}
+================= SYMBOLS ================
+Symbol Table ID: 0
+  a -> signed char
+  b -> signed short int
+  c -> signed int
+  d -> signed long int
+  main -> function(signed int, [void])
+

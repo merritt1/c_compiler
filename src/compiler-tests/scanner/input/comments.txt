@@ -1,0 +1,5 @@
+/* this is a comment */
+int a = 123;
+/* this is a *** weirder comment let's see if it works ****/
+"failsafe"
+/* how about this one?/////*/

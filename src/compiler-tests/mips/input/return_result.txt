@@ -1,0 +1,11 @@
+void syscall_print_int(int integer);
+int b;
+
+int potato(void) {
+return 999;
+}
+
+int main(void) {
+b = potato();
+syscall_print_int(b);
+}

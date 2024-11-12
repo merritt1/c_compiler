@@ -1,0 +1,21 @@
+void syscall_print_int(int integer);
+int c[10];
+
+
+void setints(void) {
+	int i;
+	for (i; i < 10; ++i) {
+		c[i] = i;
+	}
+}
+
+int main(void) {
+	setints();
+	int i;
+	i = 0;
+
+	while (i < 10) {
+		syscall_print_int(c[i]);
+		++i;
+	}
+}

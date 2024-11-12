@@ -1,0 +1,4 @@
+int main(char c) {
+    int c;
+    return 0;
+}

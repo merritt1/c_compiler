@@ -1,0 +1,12 @@
+=============== PARSE TREE ===============
+signed int (a[(1|4)]);
+signed int (b[(7&3)]);
+signed int (c[(~(-3))]);
+signed int (d[0 ? 4 : 5]);
+================= SYMBOLS ================
+Symbol Table ID: 0
+  a -> array(5, signed int)
+  b -> array(3, signed int)
+  c -> array(2, signed int)
+  d -> array(5, signed int)
+

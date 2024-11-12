@@ -1,0 +1,8 @@
+(procBegin,  main)
+(addressOf,     r0,      i)
+(constInt,     r1,          5)
+(storeWord,     r0,      r1)
+(addressOf,     r2,      p)
+(addressOf,     r3,      i)
+(storeWord,     r2,      r3)
+(procEnd ,  main)

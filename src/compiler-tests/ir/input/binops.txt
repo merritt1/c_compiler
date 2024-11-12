@@ -1,0 +1,4 @@
+int main(void) {
+	int i, j, k, l;
+	i=j+k*l;
+}

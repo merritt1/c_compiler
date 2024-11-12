@@ -1,0 +1,9 @@
+int main(void) {
+if (b != 0) {
+    i = 0;
+    j = 2;
+} else {
+    p = 0;
+    o = 123;
+}
+}

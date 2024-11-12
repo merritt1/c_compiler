@@ -1,0 +1,5 @@
+(procBegin,  main)
+(addressOf,     r0,      p)
+(addressOf,     r1,   _StringLabel_0)
+(storeWord,     r0,      r1)
+(procEnd ,  main)

@@ -1,0 +1,4 @@
+int main(void) {
+signed int a[10], *p;
+p = (signed int *)a;
+}

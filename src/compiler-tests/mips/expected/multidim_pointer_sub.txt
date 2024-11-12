@@ -1,0 +1,62 @@
+	.data
+
+	.text
+	.globl main
+main:
+	addiu $sp, $sp, -152
+	sw $fp, 48($sp)
+	or $fp, $sp, $0
+	sw $ra, 52($fp)
+	sw $a0, 0($fp)
+	sw $a1, 4($fp)
+	sw $a2, 8($fp)
+	sw $a3, 12($fp)
+	sw $s0, 16($fp)
+	sw $s1, 20($fp)
+	sw $s2, 24($fp)
+	sw $s3, 28($fp)
+	sw $s4, 32($fp)
+	sw $s5, 36($fp)
+	sw $s6, 40($fp)
+	sw $s7, 44($fp)
+	sw $a1, 132($fp)
+	sw $a2, 136($fp)
+	sw $a3, 140($fp)
+	la $s0, 132($fp)
+	la $s1, 96($fp)
+	li $s2, 0
+	li $s3, 12
+	mul $s4, $s2, $s3
+	addu $s5, $s1, $s4
+	li $s6, 0
+	li $s7, 4
+	mul $t0, $s6, $s7
+	addu $t1, $s5, $t0
+	sw $t1, 0($s0)
+	la $t2, 136($fp)
+	la $t3, 96($fp)
+	li $t4, 0
+	li $t5, 12
+	mul $t6, $t4, $t5
+	addu $t7, $t3, $t6
+	li $t8, 2
+	li $t9, 4
+	mul $s0, $t8, $t9
+	addu $s1, $t7, $s0
+	sw $s1, 0($t2)
+	la $s2, 140($fp)
+	la $s3, 136($fp)
+	la $s4, 132($fp)
+	lw $s5, 0($s3)
+	lw $s6, 0($s4)
+	subu $s7, $s5, $s6
+	li $t0, 4
+	divu $t1, $s7, $t0
+	sw $t1, 0($s2)
+	la $t2, 140($fp)
+	lw $t3, 0($t2)
+	or $a0, $t3, $0
+	li $v0,1
+	syscall
+	li $v0,10
+	syscall

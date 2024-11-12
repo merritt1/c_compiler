@@ -1,0 +1,8 @@
+void main(void) {
+	int i;
+	i = 3;
+	do {
+		i = i - i;
+		break;
+	} while (i);
+}

@@ -1,0 +1,19 @@
+int i;
+int (*p)[10](int, char);
+unsigned char uc;
+long int li;
+int *r;
+unsigned char *pp;
+int a[20];
+int *(aa[30][20]);
+int (*(aaa[10]))[50];
+char f(int i, int *p);
+signed char aaaa, *b, c[10];
+
+int abc(char f) {
+short firstfunction;
+first: b;
+goto first;
+f+i;
+f++;
+}

@@ -1,0 +1,3 @@
+signed int (main(void)) {
+(c="he\234llo");
+}

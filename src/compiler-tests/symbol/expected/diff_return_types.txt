@@ -1,0 +1,15 @@
+
+
+
+***ERROR: Redefinition of function identifier 'main'
+
+
+=============== PARSE TREE ===============
+signed int (main(void));
+void (main(void)) {
+return;
+}
+================= SYMBOLS ================
+Symbol Table ID: 0
+  main -> function(signed int, [void])
+

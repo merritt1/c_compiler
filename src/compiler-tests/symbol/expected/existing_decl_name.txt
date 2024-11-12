@@ -1,0 +1,15 @@
+
+
+
+***ERROR: Redefinition of identifier 'a'
+
+
+=============== PARSE TREE ===============
+signed int (a);
+signed int (a(void)) {
+return 0;
+}
+================= SYMBOLS ================
+Symbol Table ID: 0
+  a -> signed int
+

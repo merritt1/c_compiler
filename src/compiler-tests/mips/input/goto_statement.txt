@@ -1,0 +1,13 @@
+void syscall_print_int(int integer);
+int b;
+char *c;
+
+int main(void) {
+int a;
+a = 123;
+b = 456;
+c = "Hello!";
+goto mylabel;
+syscall_print_int(a);
+mylabel: syscall_print_int(b);
+}

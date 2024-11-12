@@ -1,0 +1,2 @@
+loc = 0001:0001-0001:0003     text = 'a'                      token = [NUMBER              ]     type =   signed  int     value = [97        ]
+loc = 0001:0005-0001:0007     text = '$'                      token = [NUMBER              ]     type =   signed  int     value = [36        ]

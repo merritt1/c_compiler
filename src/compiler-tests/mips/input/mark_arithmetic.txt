@@ -1,0 +1,18 @@
+  void syscall_print_int(int);
+  void syscall_print_string(char*);
+  int main(void) {
+      int i, j;
+      i = 10;
+      j = 2;
+
+      syscall_print_int(i + j);
+      syscall_print_string("\n");
+      syscall_print_int(i - j);
+      syscall_print_string("\n");
+      syscall_print_int(i * j);
+      syscall_print_string("\n");
+      syscall_print_int(i / j);
+      syscall_print_string("\n");
+
+      return 0;
+  }

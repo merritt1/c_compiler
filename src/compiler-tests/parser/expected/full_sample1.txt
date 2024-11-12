@@ -1,0 +1,10 @@
+signed char (fcn(unsigned int (*(a[(10+2)]))));
+signed int (a[]);
+signed int (main(void)) {
+(a=(b+((c/(d++))*e)));
+(j=(*(a+5)));
+(print("Hello"));
+potato:
+    (++a);
+return a;
+}

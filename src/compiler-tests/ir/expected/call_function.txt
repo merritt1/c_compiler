@@ -1,0 +1,5 @@
+(procBegin,  _Global_functionName)
+(procEnd ,  _Global_functionName)
+(procBegin,  main)
+(call    ,  _Global_functionName)
+(procEnd ,  main)

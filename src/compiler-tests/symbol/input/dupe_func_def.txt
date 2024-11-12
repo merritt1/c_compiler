@@ -1,0 +1,9 @@
+int myFunc(void) {
+    return 123;
+}
+int myFunc(void) {
+    return 456;
+}
+int main(void) {
+    return myFunc();
+}

@@ -1,0 +1,17 @@
+void syscall_print_int(int i);
+void syscall_print_string(char *string);
+
+int main(void) {
+  int a[10][10];
+  int i, j;
+  for (i = 0; i < 10; ++i) {
+    for (j = 0; j < 10; ++j) {
+      a[i][j] = i * j;
+    }
+  }
+  syscall_print_string("Expecting 12, got: ");
+  syscall_print_int(a[3][4]);
+  syscall_print_string("\nExpecting 54, got: ");
+  syscall_print_int(a[6][9]);
+  syscall_print_string("\n");
+}

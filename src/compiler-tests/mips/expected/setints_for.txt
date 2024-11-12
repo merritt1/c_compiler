@@ -1,0 +1,125 @@
+	.data
+_Global_c: .space 40
+
+	.text
+	.globl main
+_Global_setints:
+	addiu $sp, $sp, -104
+	sw $fp, 48($sp)
+	or $fp, $sp, $0
+	sw $ra, 52($fp)
+	sw $a0, 0($fp)
+	sw $a1, 4($fp)
+	sw $a2, 8($fp)
+	sw $a3, 12($fp)
+	sw $s0, 16($fp)
+	sw $s1, 20($fp)
+	sw $s2, 24($fp)
+	sw $s3, 28($fp)
+	sw $s4, 32($fp)
+	sw $s5, 36($fp)
+	sw $s6, 40($fp)
+	sw $s7, 44($fp)
+	sw $a0, 96($fp)
+	la $s0, 96($fp)
+_GeneratedLabel_1:
+	la $s1, 96($fp)
+	li $s2, 10
+	lw $s3, 0($s1)
+	slt $s4, $s3, $s2
+	beqz $s4, _GeneratedLabel_2
+	la $s5, _Global_c
+	la $s6, 96($fp)
+	lw $s7, 0($s6)
+	li $t0, 4
+	mul $t1, $s7, $t0
+	addu $t2, $s5, $t1
+	la $t3, 96($fp)
+	lw $t4, 0($t3)
+	sw $t4, 0($t2)
+	la $t5, 96($fp)
+	li $t6, 1
+	lw $t7, 0($t5)
+	addu $t8, $t7, $t6
+	sw $t8, 0($t5)
+	b _GeneratedLabel_1
+_GeneratedLabel_2:
+	lw $s7, 44($fp)
+	lw $s6, 40($fp)
+	lw $s5, 36($fp)
+	lw $s4, 32($fp)
+	lw $s3, 28($fp)
+	lw $s2, 24($fp)
+	lw $s1, 20($fp)
+	lw $s0, 16($fp)
+	lw $ra, 52($fp)
+	lw $fp, 48($fp)
+	addiu $sp, $sp, 104
+	jr $ra
+main:
+	addiu $sp, $sp, -104
+	sw $fp, 48($sp)
+	or $fp, $sp, $0
+	sw $ra, 52($fp)
+	sw $a0, 0($fp)
+	sw $a1, 4($fp)
+	sw $a2, 8($fp)
+	sw $a3, 12($fp)
+	sw $s0, 16($fp)
+	sw $s1, 20($fp)
+	sw $s2, 24($fp)
+	sw $s3, 28($fp)
+	sw $s4, 32($fp)
+	sw $s5, 36($fp)
+	sw $s6, 40($fp)
+	sw $s7, 44($fp)
+	sw $a0, 96($fp)
+	sw $t0, 56($fp)
+	sw $t1, 60($fp)
+	sw $t2, 64($fp)
+	sw $t3, 68($fp)
+	sw $t4, 72($fp)
+	sw $t5, 76($fp)
+	sw $t6, 80($fp)
+	sw $t7, 84($fp)
+	sw $t8, 88($fp)
+	sw $t8, 92($fp)
+	jal _Global_setints
+	lw $t9, 92($fp)
+	lw $t8, 88($fp)
+	lw $t7, 84($fp)
+	lw $t6, 80($fp)
+	lw $t5, 76($fp)
+	lw $t4, 72($fp)
+	lw $t3, 68($fp)
+	lw $t2, 64($fp)
+	lw $t1, 60($fp)
+	lw $t0, 56($fp)
+	la $s1, 96($fp)
+	li $s2, 0
+	sw $s2, 0($s1)
+_GeneratedLabel_3:
+	la $s3, 96($fp)
+	li $s4, 10
+	lw $s5, 0($s3)
+	slt $s6, $s5, $s4
+	beqz $s6, _GeneratedLabel_4
+	la $s7, _Global_c
+	la $t0, 96($fp)
+	lw $t1, 0($t0)
+	li $t2, 4
+	mul $t3, $t1, $t2
+	addu $t4, $s7, $t3
+	lw $t5, 0($t4)
+	or $a0, $t5, $0
+	li $v0,1
+	syscall
+	la $t6, 96($fp)
+	li $t7, 1
+	lw $t8, 0($t6)
+	addu $t9, $t8, $t7
+	sw $t9, 0($t6)
+	b _GeneratedLabel_3
+_GeneratedLabel_4:
+	li $v0,10
+	syscall

@@ -1,0 +1,290 @@
+	.data
+_StringLabel_2: .asciiz "\n"
+_StringLabel_1: .asciiz " equals "
+_StringLabel_0: .asciiz "Factorial of "
+
+	.text
+	.globl main
+main:
+	addiu $sp, $sp, -192
+	sw $fp, 48($sp)
+	or $fp, $sp, $0
+	sw $ra, 52($fp)
+	sw $a0, 0($fp)
+	sw $a1, 4($fp)
+	sw $a2, 8($fp)
+	sw $a3, 12($fp)
+	sw $s0, 16($fp)
+	sw $s1, 20($fp)
+	sw $s2, 24($fp)
+	sw $s3, 28($fp)
+	sw $s4, 32($fp)
+	sw $s5, 36($fp)
+	sw $s6, 40($fp)
+	sw $s7, 44($fp)
+	sw $a1, 176($fp)
+	sw $a2, 180($fp)
+	la $s0, 96($fp)
+	or $a0, $s0, $0
+	la $s1, _StringLabel_0
+	or $a1, $s1, $0
+	sw $t0, 56($fp)
+	sw $t1, 60($fp)
+	sw $t2, 64($fp)
+	sw $t3, 68($fp)
+	sw $t4, 72($fp)
+	sw $t5, 76($fp)
+	sw $t6, 80($fp)
+	sw $t7, 84($fp)
+	sw $t8, 88($fp)
+	sw $t8, 92($fp)
+	jal _Global_strcpy
+	lw $t9, 92($fp)
+	lw $t8, 88($fp)
+	lw $t7, 84($fp)
+	lw $t6, 80($fp)
+	lw $t5, 76($fp)
+	lw $t4, 72($fp)
+	lw $t3, 68($fp)
+	lw $t2, 64($fp)
+	lw $t1, 60($fp)
+	lw $t0, 56($fp)
+	la $s2, 96($fp)
+	or $a0, $s2, $0
+	li $v0,4
+	syscall
+	la $s3, 176($fp)
+	li $v0,5
+	syscall
+	or $s4, $v0, $0
+	sw $s4, 0($s3)
+	la $s5, 96($fp)
+	or $a0, $s5, $0
+	la $s6, _StringLabel_1
+	or $a1, $s6, $0
+	sw $t0, 56($fp)
+	sw $t1, 60($fp)
+	sw $t2, 64($fp)
+	sw $t3, 68($fp)
+	sw $t4, 72($fp)
+	sw $t5, 76($fp)
+	sw $t6, 80($fp)
+	sw $t7, 84($fp)
+	sw $t8, 88($fp)
+	sw $t8, 92($fp)
+	jal _Global_strcpy
+	lw $t9, 92($fp)
+	lw $t8, 88($fp)
+	lw $t7, 84($fp)
+	lw $t6, 80($fp)
+	lw $t5, 76($fp)
+	lw $t4, 72($fp)
+	lw $t3, 68($fp)
+	lw $t2, 64($fp)
+	lw $t1, 60($fp)
+	lw $t0, 56($fp)
+	la $s7, 96($fp)
+	or $a0, $s7, $0
+	li $v0,4
+	syscall
+	la $t0, 180($fp)
+	la $t1, 176($fp)
+	lw $t2, 0($t1)
+	or $a0, $t2, $0
+	sw $t0, 56($fp)
+	sw $t1, 60($fp)
+	sw $t2, 64($fp)
+	sw $t3, 68($fp)
+	sw $t4, 72($fp)
+	sw $t5, 76($fp)
+	sw $t6, 80($fp)
+	sw $t7, 84($fp)
+	sw $t8, 88($fp)
+	sw $t8, 92($fp)
+	jal _Global_factorial
+	lw $t9, 92($fp)
+	lw $t8, 88($fp)
+	lw $t7, 84($fp)
+	lw $t6, 80($fp)
+	lw $t5, 76($fp)
+	lw $t4, 72($fp)
+	lw $t3, 68($fp)
+	lw $t2, 64($fp)
+	lw $t1, 60($fp)
+	lw $t0, 56($fp)
+	or $t3, $v0, $0
+	sw $t3, 0($t0)
+	la $t4, 180($fp)
+	lw $t5, 0($t4)
+	or $a0, $t5, $0
+	li $v0,1
+	syscall
+	la $t6, 96($fp)
+	or $a0, $t6, $0
+	la $t7, _StringLabel_2
+	or $a1, $t7, $0
+	sw $t0, 56($fp)
+	sw $t1, 60($fp)
+	sw $t2, 64($fp)
+	sw $t3, 68($fp)
+	sw $t4, 72($fp)
+	sw $t5, 76($fp)
+	sw $t6, 80($fp)
+	sw $t7, 84($fp)
+	sw $t8, 88($fp)
+	sw $t8, 92($fp)
+	jal _Global_strcpy
+	lw $t9, 92($fp)
+	lw $t8, 88($fp)
+	lw $t7, 84($fp)
+	lw $t6, 80($fp)
+	lw $t5, 76($fp)
+	lw $t4, 72($fp)
+	lw $t3, 68($fp)
+	lw $t2, 64($fp)
+	lw $t1, 60($fp)
+	lw $t0, 56($fp)
+	la $t8, 96($fp)
+	or $a0, $t8, $0
+	li $v0,4
+	syscall
+	li $t9, 0
+	or $v0, $t9, $0
+	b _GeneratedLabel_1
+_GeneratedLabel_1:
+	li $v0,10
+	syscall
+_Global_strcpy:
+	addiu $sp, $sp, -112
+	sw $fp, 48($sp)
+	or $fp, $sp, $0
+	sw $ra, 52($fp)
+	sw $a0, 0($fp)
+	sw $a1, 4($fp)
+	sw $a2, 8($fp)
+	sw $a3, 12($fp)
+	sw $s0, 16($fp)
+	sw $s1, 20($fp)
+	sw $s2, 24($fp)
+	sw $s3, 28($fp)
+	sw $s4, 32($fp)
+	sw $s5, 36($fp)
+	sw $s6, 40($fp)
+	sw $s7, 44($fp)
+	sw $a0, 96($fp)
+	sw $a1, 100($fp)
+	sw $a2, 104($fp)
+	la $s1, 104($fp)
+	la $s2, 96($fp)
+	lw $s3, 0($s2)
+	sw $s3, 0($s1)
+_GeneratedLabel_2:
+	la $s4, 96($fp)
+	li $s5, 1
+	lw $s6, 0($s4)
+	addu $s7, $s6, $s5
+	sw $s7, 0($s4)
+	la $t0, 100($fp)
+	lw $t1, 0($t0)
+	lb $t2, 0($t1)
+	sb $t2, 0($s6)
+_GeneratedLabel_3:
+	la $t3, 100($fp)
+	li $t4, 1
+	lw $t5, 0($t3)
+	addu $t6, $t5, $t4
+	sw $t6, 0($t3)
+	lb $t7, 0($t5)
+	bnez $t7, _GeneratedLabel_2
+_GeneratedLabel_4:
+	la $t8, 104($fp)
+	lw $t9, 0($t8)
+	or $v0, $t9, $0
+	b _GeneratedLabel_5
+_GeneratedLabel_5:
+	lw $s7, 44($fp)
+	lw $s6, 40($fp)
+	lw $s5, 36($fp)
+	lw $s4, 32($fp)
+	lw $s3, 28($fp)
+	lw $s2, 24($fp)
+	lw $s1, 20($fp)
+	lw $s0, 16($fp)
+	lw $ra, 52($fp)
+	lw $fp, 48($fp)
+	addiu $sp, $sp, 112
+	jr $ra
+_Global_factorial:
+	addiu $sp, $sp, -104
+	sw $fp, 48($sp)
+	or $fp, $sp, $0
+	sw $ra, 52($fp)
+	sw $a0, 0($fp)
+	sw $a1, 4($fp)
+	sw $a2, 8($fp)
+	sw $a3, 12($fp)
+	sw $s0, 16($fp)
+	sw $s1, 20($fp)
+	sw $s2, 24($fp)
+	sw $s3, 28($fp)
+	sw $s4, 32($fp)
+	sw $s5, 36($fp)
+	sw $s6, 40($fp)
+	sw $s7, 44($fp)
+	sw $a0, 96($fp)
+	la $s1, 96($fp)
+	li $s2, 1
+	lw $s3, 0($s1)
+	sle $s4, $s3, $s2
+	beqz $s4, _GeneratedLabel_6
+	li $s5, 1
+	or $v0, $s5, $0
+	b _GeneratedLabel_7
+_GeneratedLabel_6:
+	bnez $s4, _GeneratedLabel_8
+	la $s6, 96($fp)
+	la $s7, 96($fp)
+	li $t0, 1
+	lw $t1, 0($s7)
+	subu $t2, $t1, $t0
+	or $a0, $t2, $0
+	sw $t0, 56($fp)
+	sw $t1, 60($fp)
+	sw $t2, 64($fp)
+	sw $t3, 68($fp)
+	sw $t4, 72($fp)
+	sw $t5, 76($fp)
+	sw $t6, 80($fp)
+	sw $t7, 84($fp)
+	sw $t8, 88($fp)
+	sw $t8, 92($fp)
+	jal _Global_factorial
+	lw $t9, 92($fp)
+	lw $t8, 88($fp)
+	lw $t7, 84($fp)
+	lw $t6, 80($fp)
+	lw $t5, 76($fp)
+	lw $t4, 72($fp)
+	lw $t3, 68($fp)
+	lw $t2, 64($fp)
+	lw $t1, 60($fp)
+	lw $t0, 56($fp)
+	lw $t3, 0($s6)
+	or $t4, $v0, $0
+	mul $t5, $t3, $t4
+	or $v0, $t5, $0
+	b _GeneratedLabel_7
+_GeneratedLabel_8:
+_GeneratedLabel_7:
+	lw $s7, 44($fp)
+	lw $s6, 40($fp)
+	lw $s5, 36($fp)
+	lw $s4, 32($fp)
+	lw $s3, 28($fp)
+	lw $s2, 24($fp)
+	lw $s1, 20($fp)
+	lw $s0, 16($fp)
+	lw $ra, 52($fp)
+	lw $fp, 48($fp)
+	addiu $sp, $sp, 104
+	jr $ra

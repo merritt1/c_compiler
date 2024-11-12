@@ -1,0 +1,11 @@
+void syscall_print_int(int i);
+void syscall_print_string(char *string);
+
+int main(void) {
+  int a[3][3];
+  int *i, *j, result;
+  i = &(a[0][0]);
+  j = &(a[0][2]);
+  result = j - i;
+  syscall_print_int(result);
+}

@@ -1,0 +1,10 @@
+void syscall_print_int(int i);
+void syscall_print_string(char *string);
+
+int main(void) {
+  int c;
+  c = 123;
+  if (1 || ++c) {
+  }
+  syscall_print_int(c);
+}

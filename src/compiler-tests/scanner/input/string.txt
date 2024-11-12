@@ -1,0 +1,4 @@
+"sample"
+"This is a string with some special characters \n39458 ** \b\b 2o34iu^^%$*$()"
+"string with some single quotes 'a'"
+"string with a /* comment */ inside of it"

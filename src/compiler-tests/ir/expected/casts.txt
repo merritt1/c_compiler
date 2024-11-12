@@ -1,0 +1,8 @@
+(procBegin,  main)
+(addressOf,     r0,      i)
+(addressOf,     r1,      j)
+(loadWord,     r2,      r1)
+(castWordToByte,     r3,      r2)
+(castSignedByteToWord,     r4,      r3)
+(storeWord,     r0,      r4)
+(procEnd ,  main)

@@ -1,0 +1,17 @@
+
+
+
+***ERROR: "Void" cannot be mixed with other parameters.
+
+
+=============== PARSE TREE ===============
+signed int (main(void, signed char (c))) {
+return 0;
+}
+================= SYMBOLS ================
+Symbol Table ID: 0
+  main -> function(signed int, [void, signed char])
+
+Symbol Table ID: 1
+  c -> signed char
+

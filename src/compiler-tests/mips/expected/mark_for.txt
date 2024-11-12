@@ -1,0 +1,55 @@
+	.data
+_StringLabel_0: .asciiz "\n"
+
+	.text
+	.globl main
+main:
+	addiu $sp, $sp, -104
+	sw $fp, 48($sp)
+	or $fp, $sp, $0
+	sw $ra, 52($fp)
+	sw $a0, 0($fp)
+	sw $a1, 4($fp)
+	sw $a2, 8($fp)
+	sw $a3, 12($fp)
+	sw $s0, 16($fp)
+	sw $s1, 20($fp)
+	sw $s2, 24($fp)
+	sw $s3, 28($fp)
+	sw $s4, 32($fp)
+	sw $s5, 36($fp)
+	sw $s6, 40($fp)
+	sw $s7, 44($fp)
+	sw $a0, 96($fp)
+	la $s0, 96($fp)
+	li $s1, 0
+	sw $s1, 0($s0)
+_GeneratedLabel_1:
+	la $s2, 96($fp)
+	li $s3, 10
+	lw $s4, 0($s2)
+	slt $s5, $s4, $s3
+	beqz $s5, _GeneratedLabel_2
+	la $s6, 96($fp)
+	lw $s7, 0($s6)
+	or $a0, $s7, $0
+	li $v0,1
+	syscall
+	la $t0, _StringLabel_0
+	or $a0, $t0, $0
+	li $v0,4
+	syscall
+	la $t1, 96($fp)
+	la $t2, 96($fp)
+	li $t3, 1
+	lw $t4, 0($t2)
+	addu $t5, $t4, $t3
+	sw $t5, 0($t1)
+	b _GeneratedLabel_1
+_GeneratedLabel_2:
+	li $t6, 0
+	or $v0, $t6, $0
+	b _GeneratedLabel_3
+_GeneratedLabel_3:
+	li $v0,10
+	syscall

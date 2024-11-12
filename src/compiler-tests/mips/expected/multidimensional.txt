@@ -1,0 +1,115 @@
+	.data
+_StringLabel_2: .asciiz "\n"
+_StringLabel_1: .asciiz "\nExpecting 54, got: "
+_StringLabel_0: .asciiz "Expecting 12, got: "
+
+	.text
+	.globl main
+main:
+	addiu $sp, $sp, -512
+	sw $fp, 48($sp)
+	or $fp, $sp, $0
+	sw $ra, 52($fp)
+	sw $a0, 0($fp)
+	sw $a1, 4($fp)
+	sw $a2, 8($fp)
+	sw $a3, 12($fp)
+	sw $s0, 16($fp)
+	sw $s1, 20($fp)
+	sw $s2, 24($fp)
+	sw $s3, 28($fp)
+	sw $s4, 32($fp)
+	sw $s5, 36($fp)
+	sw $s6, 40($fp)
+	sw $s7, 44($fp)
+	sw $a1, 496($fp)
+	sw $a2, 500($fp)
+	la $s0, 496($fp)
+	li $s1, 0
+	sw $s1, 0($s0)
+_GeneratedLabel_1:
+	la $s2, 496($fp)
+	li $s3, 10
+	lw $s4, 0($s2)
+	slt $s5, $s4, $s3
+	beqz $s5, _GeneratedLabel_2
+	la $s6, 500($fp)
+	li $s7, 0
+	sw $s7, 0($s6)
+_GeneratedLabel_3:
+	la $t0, 500($fp)
+	li $t1, 10
+	lw $t2, 0($t0)
+	slt $t3, $t2, $t1
+	beqz $t3, _GeneratedLabel_4
+	la $t4, 96($fp)
+	la $t5, 496($fp)
+	lw $t6, 0($t5)
+	li $t7, 40
+	mul $t8, $t6, $t7
+	addu $t9, $t4, $t8
+	la $s0, 500($fp)
+	lw $s1, 0($s0)
+	li $s2, 4
+	mul $s3, $s1, $s2
+	addu $s4, $t9, $s3
+	la $s5, 496($fp)
+	la $s6, 500($fp)
+	lw $s7, 0($s5)
+	lw $t0, 0($s6)
+	mul $t1, $s7, $t0
+	sw $t1, 0($s4)
+	la $t2, 500($fp)
+	li $t3, 1
+	lw $t4, 0($t2)
+	addu $t5, $t4, $t3
+	sw $t5, 0($t2)
+	b _GeneratedLabel_3
+_GeneratedLabel_4:
+	la $t6, 496($fp)
+	li $t7, 1
+	lw $t8, 0($t6)
+	addu $t9, $t8, $t7
+	sw $t9, 0($t6)
+	b _GeneratedLabel_1
+_GeneratedLabel_2:
+	la $s0, _StringLabel_0
+	or $a0, $s0, $0
+	li $v0,4
+	syscall
+	la $s1, 96($fp)
+	li $s2, 3
+	li $s3, 40
+	mul $s4, $s2, $s3
+	addu $s5, $s1, $s4
+	li $s6, 4
+	li $s7, 4
+	mul $t0, $s6, $s7
+	addu $t1, $s5, $t0
+	lw $t2, 0($t1)
+	or $a0, $t2, $0
+	li $v0,1
+	syscall
+	la $t3, _StringLabel_1
+	or $a0, $t3, $0
+	li $v0,4
+	syscall
+	la $t4, 96($fp)
+	li $t5, 6
+	li $t6, 40
+	mul $t7, $t5, $t6
+	addu $t8, $t4, $t7
+	li $t9, 9
+	li $s0, 4
+	mul $s1, $t9, $s0
+	addu $s2, $t8, $s1
+	lw $s3, 0($s2)
+	or $a0, $s3, $0
+	li $v0,1
+	syscall
+	la $s4, _StringLabel_2
+	or $a0, $s4, $0
+	li $v0,4
+	syscall
+	li $v0,10
+	syscall

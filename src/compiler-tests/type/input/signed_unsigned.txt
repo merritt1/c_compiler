@@ -1,0 +1,6 @@
+signed char a;
+unsigned int c;
+int main(void) {
+a + c;
+c + a;
+}

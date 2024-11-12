@@ -1,0 +1,6 @@
+void main(void) {
+	int i;
+	myLabel:
+		i = 3;
+	goto myLabel;
+}

@@ -1,0 +1,10 @@
+int i;
+unsigned char uc;
+long int li;
+int *p;
+unsigned char *pp;
+int a[20];
+int *(aa[30][20]);
+int (*(aaa[10]))[50];
+char f(int i, int *p);
+signed char aaaa, *b, c[10];

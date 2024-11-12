@@ -1,0 +1,6 @@
+loc = 0001:0001-0001:0003     text = 123                      token = [NUMBER              ]     type =   signed  int     value = [123       ]
+loc = 0002:0001-0002:0001     text = 0                        token = [NUMBER              ]     type =   signed  int     value = [0         ]
+loc = 0002:0002-0002:0002     text = 9                        token = [NUMBER              ]     type =   signed  int     value = [9         ]
+loc = 0003:0001-0003:0001     text = 0                        token = [NUMBER              ]     type =   signed  int     value = [0         ]
+loc = 0003:0002-0003:0002     text = 0                        token = [NUMBER              ]     type =   signed  int     value = [0         ]
+loc = 0003:0003-0003:0003     text = 7                        token = [NUMBER              ]     type =   signed  int     value = [7         ]

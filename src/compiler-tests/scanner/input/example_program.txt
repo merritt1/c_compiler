@@ -1,0 +1,15 @@
+/* a sample program written in the subset of C89 accepted by our compiler */
+
+int main(void) {
+    char *str = "this is a string";
+    int a = 0;
+    for (int b = 0; b < 5; ++b) {
+        unsigned int f = 12;
+        if (b > 4) return 0;
+        while (0) {
+            (char) a += 12;
+        }
+    char f = 'A';
+    char newline = '\n';
+    }
+}

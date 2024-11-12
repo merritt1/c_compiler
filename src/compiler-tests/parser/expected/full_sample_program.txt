@@ -1,0 +1,31 @@
+unsigned int (abc);
+signed char (a);
+signed char (b);
+signed int (c);
+signed int (a), (b), (c);
+signed char (d[3]), (*(e)), (**(f));
+signed int (a[1][2][3]);
+void (fn(signed int, signed char, signed int));
+signed int (fn1(signed char ([][2])));
+signed char (fn3(signed char (*), signed int (*)));
+signed int (a(signed int (b), signed int (c)));
+signed int (main(void)) {
+(a=(b=c));
+(c++);
+(a=((d--)+((c/3)%4)));
+if (((a||b)||(c&&d))) {
+goto label;
+return;
+break;
+continue;
+}
+else {
+(a++);
+}
+while ((a>0)) {
+(b--);
+}
+}
+signed char (test(signed int (a), signed char (b))) {
+(main(123));
+}

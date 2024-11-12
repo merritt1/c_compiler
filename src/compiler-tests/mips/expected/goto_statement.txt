@@ -1,0 +1,48 @@
+	.data
+_Global_b: .word 0
+_Global_c: .word 0
+_StringLabel_0: .asciiz "Hello!"
+
+	.text
+	.globl main
+main:
+	addiu $sp, $sp, -104
+	sw $fp, 48($sp)
+	or $fp, $sp, $0
+	sw $ra, 52($fp)
+	sw $a0, 0($fp)
+	sw $a1, 4($fp)
+	sw $a2, 8($fp)
+	sw $a3, 12($fp)
+	sw $s0, 16($fp)
+	sw $s1, 20($fp)
+	sw $s2, 24($fp)
+	sw $s3, 28($fp)
+	sw $s4, 32($fp)
+	sw $s5, 36($fp)
+	sw $s6, 40($fp)
+	sw $s7, 44($fp)
+	sw $a0, 96($fp)
+	la $s0, 96($fp)
+	li $s1, 123
+	sw $s1, 0($s0)
+	la $s2, _Global_b
+	li $s3, 456
+	sw $s3, 0($s2)
+	la $s4, _Global_c
+	la $s5, _StringLabel_0
+	sw $s5, 0($s4)
+	b _UserLabel_main_mylabel
+	la $s6, 96($fp)
+	lw $s7, 0($s6)
+	or $a0, $s7, $0
+	li $v0,1
+	syscall
+_UserLabel_main_mylabel:
+	la $t0, _Global_b
+	lw $t1, 0($t0)
+	or $a0, $t1, $0
+	li $v0,1
+	syscall
+	li $v0,10
+	syscall

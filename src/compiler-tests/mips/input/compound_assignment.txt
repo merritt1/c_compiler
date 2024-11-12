@@ -1,0 +1,13 @@
+void syscall_print_int(int i);
+void syscall_print_string(char *string);
+
+int main(void) {
+  int a;
+  a = 0;
+  a += 3;
+  syscall_print_int(a);
+  syscall_print_string("\n");
+  a *= 5;
+  syscall_print_int(a);
+  syscall_print_string("\n");
+}

@@ -1,0 +1,48 @@
+	.data
+_Global_c: .word 0
+_Global_d: .word 0
+_StringLabel_1: .asciiz "World!"
+_StringLabel_0: .asciiz "Hello!"
+
+	.text
+	.globl main
+main:
+	addiu $sp, $sp, -104
+	sw $fp, 48($sp)
+	or $fp, $sp, $0
+	sw $ra, 52($fp)
+	sw $a0, 0($fp)
+	sw $a1, 4($fp)
+	sw $a2, 8($fp)
+	sw $a3, 12($fp)
+	sw $s0, 16($fp)
+	sw $s1, 20($fp)
+	sw $s2, 24($fp)
+	sw $s3, 28($fp)
+	sw $s4, 32($fp)
+	sw $s5, 36($fp)
+	sw $s6, 40($fp)
+	sw $s7, 44($fp)
+	la $s0, _Global_c
+	la $s1, _StringLabel_0
+	sw $s1, 0($s0)
+	la $s2, _Global_d
+	la $s3, _StringLabel_1
+	sw $s3, 0($s2)
+	li $s4, 0
+	beqz $s4, _GeneratedLabel_1
+	la $s5, _Global_c
+	lw $s6, 0($s5)
+	or $a0, $s6, $0
+	li $v0,4
+	syscall
+_GeneratedLabel_1:
+	bnez $s4, _GeneratedLabel_2
+	la $s7, _Global_d
+	lw $t0, 0($s7)
+	or $a0, $t0, $0
+	li $v0,4
+	syscall
+_GeneratedLabel_2:
+	li $v0,10
+	syscall

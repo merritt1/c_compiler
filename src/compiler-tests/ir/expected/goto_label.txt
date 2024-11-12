@@ -1,0 +1,7 @@
+(procBegin,  main)
+(label   ,  _UserLabel_main_myLabel)
+(addressOf,     r0,      i)
+(constInt,     r1,          3)
+(storeWord,     r0,      r1)
+(goto    ,  _UserLabel_main_myLabel)
+(procEnd ,  main)

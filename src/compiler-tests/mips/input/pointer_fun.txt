@@ -1,0 +1,15 @@
+void syscall_print_int(int i);
+
+int main(void) {
+  int a[3];
+  int *b, i;
+  b = a;
+  a[0] = 6;
+  a[1] = 6;
+  a[2] = 6;
+  ++b;
+  *b = 9;
+  for (i = 0; i < 3; ++i) {
+    syscall_print_int(a[i]);
+  }
+}

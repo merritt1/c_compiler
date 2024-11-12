@@ -1,0 +1,18 @@
+unsigned char a;
+unsigned short b;
+unsigned int c;
+unsigned long d;
+int main(void) {
+a + b;
+b + a;
+a + c;
+c + a;
+a + d;
+d + a;
+b + c;
+c + b;
+c + d;
+d + c;
+a + b + c + d;
+d + c + b + a;
+}

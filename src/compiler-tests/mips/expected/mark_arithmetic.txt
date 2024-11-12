@@ -1,0 +1,84 @@
+	.data
+_StringLabel_0: .asciiz "\n"
+
+	.text
+	.globl main
+main:
+	addiu $sp, $sp, -112
+	sw $fp, 48($sp)
+	or $fp, $sp, $0
+	sw $ra, 52($fp)
+	sw $a0, 0($fp)
+	sw $a1, 4($fp)
+	sw $a2, 8($fp)
+	sw $a3, 12($fp)
+	sw $s0, 16($fp)
+	sw $s1, 20($fp)
+	sw $s2, 24($fp)
+	sw $s3, 28($fp)
+	sw $s4, 32($fp)
+	sw $s5, 36($fp)
+	sw $s6, 40($fp)
+	sw $s7, 44($fp)
+	sw $a0, 96($fp)
+	sw $a1, 100($fp)
+	la $s0, 96($fp)
+	li $s1, 10
+	sw $s1, 0($s0)
+	la $s2, 100($fp)
+	li $s3, 2
+	sw $s3, 0($s2)
+	la $s4, 96($fp)
+	la $s5, 100($fp)
+	lw $s6, 0($s4)
+	lw $s7, 0($s5)
+	addu $t0, $s6, $s7
+	or $a0, $t0, $0
+	li $v0,1
+	syscall
+	la $t1, _StringLabel_0
+	or $a0, $t1, $0
+	li $v0,4
+	syscall
+	la $t2, 96($fp)
+	la $t3, 100($fp)
+	lw $t4, 0($t2)
+	lw $t5, 0($t3)
+	subu $t6, $t4, $t5
+	or $a0, $t6, $0
+	li $v0,1
+	syscall
+	la $t7, _StringLabel_0
+	or $a0, $t7, $0
+	li $v0,4
+	syscall
+	la $t8, 96($fp)
+	la $t9, 100($fp)
+	lw $s0, 0($t8)
+	lw $s1, 0($t9)
+	mul $s2, $s0, $s1
+	or $a0, $s2, $0
+	li $v0,1
+	syscall
+	la $s3, _StringLabel_0
+	or $a0, $s3, $0
+	li $v0,4
+	syscall
+	la $s4, 96($fp)
+	la $s5, 100($fp)
+	lw $s6, 0($s4)
+	lw $s7, 0($s5)
+	divu $t0, $s6, $s7
+	or $a0, $t0, $0
+	li $v0,1
+	syscall
+	la $t1, _StringLabel_0
+	or $a0, $t1, $0
+	li $v0,4
+	syscall
+	li $t2, 0
+	or $v0, $t2, $0
+	b _GeneratedLabel_1
+_GeneratedLabel_1:
+	li $v0,10
+	syscall

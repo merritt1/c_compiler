@@ -1,0 +1,26 @@
+
+
+
+***ERROR: Redefinition of identifier 'label1'
+
+
+=============== PARSE TREE ===============
+signed int (main(void)) {
+signed int (a);
+(a=1);
+label1:
+    (a=2);
+label1:
+    (a=3);
+return 0;
+}
+================= SYMBOLS ================
+Symbol Table ID: 0
+  main -> function(signed int, [void])
+
+Symbol Table ID: 1
+  a -> signed int
+
+Symbol Table ID: 2
+  label1 -> label
+

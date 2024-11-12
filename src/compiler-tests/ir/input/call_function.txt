@@ -1,0 +1,4 @@
+void functionName(void) {}
+void main(void) {
+	functionName();
+}

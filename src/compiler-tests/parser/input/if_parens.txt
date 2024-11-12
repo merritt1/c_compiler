@@ -1,0 +1,3 @@
+int main(void) {
+    if (a) return 0;
+}

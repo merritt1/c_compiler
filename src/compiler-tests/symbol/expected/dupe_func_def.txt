@@ -1,0 +1,21 @@
+
+
+
+***ERROR: Redefinition of identifier 'myFunc'
+
+
+=============== PARSE TREE ===============
+signed int (myFunc(void)) {
+return 123;
+}
+signed int (myFunc(void)) {
+return 456;
+}
+signed int (main(void)) {
+return (myFunc());
+}
+================= SYMBOLS ================
+Symbol Table ID: 0
+  myFunc -> function(signed int, [void])
+  main -> function(signed int, [void])
+

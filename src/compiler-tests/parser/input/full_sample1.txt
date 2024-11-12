@@ -1,0 +1,11 @@
+char fcn(unsigned *a[10+2]);
+int a[];
+
+
+int main(void) {
+    a = b+c/d++*e;
+    j = a[5];
+    print("Hello");
+    potato: ++a;
+    return a;
+}

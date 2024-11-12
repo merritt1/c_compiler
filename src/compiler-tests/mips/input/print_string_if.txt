@@ -1,0 +1,13 @@
+void syscall_print_string(char *string);
+char *c;
+char *d;
+
+int main(void) {
+c = "Hello!";
+d = "World!";
+if (0) {
+	syscall_print_string(c);
+} else {
+	syscall_print_string(d);	
+}
+}

@@ -1,0 +1,33 @@
+unsigned int abc;
+signed char a;
+char b;
+int c;
+int a, b, c;
+char d[3], *e, **f;
+int a[1][2][3];
+void fn(int, char, int);
+int fn1(char[][2]);
+char fn3(char*, int*);
+int a(int b, int c);
+
+int main(void) {
+	a=b=c;
+	c++;
+	a = d-- + c / 3 % 4;
+	if (a || b || c && d) {
+		goto label;
+		return;
+		break;
+		continue;
+	} else {
+		a++;
+	}
+
+	while (a>0) {
+		b--;
+	}
+}
+
+char test(int a, char b) {
+	main(123);
+}

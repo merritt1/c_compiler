@@ -1,0 +1,52 @@
+	.data
+_StringLabel_0: .asciiz "\n"
+
+	.text
+	.globl main
+main:
+	addiu $sp, $sp, -112
+	sw $fp, 48($sp)
+	or $fp, $sp, $0
+	sw $ra, 52($fp)
+	sw $a0, 0($fp)
+	sw $a1, 4($fp)
+	sw $a2, 8($fp)
+	sw $a3, 12($fp)
+	sw $s0, 16($fp)
+	sw $s1, 20($fp)
+	sw $s2, 24($fp)
+	sw $s3, 28($fp)
+	sw $s4, 32($fp)
+	sw $s5, 36($fp)
+	sw $s6, 40($fp)
+	sw $s7, 44($fp)
+	sw $a0, 96($fp)
+	la $s0, 96($fp)
+	li $s1, 666
+	sw $s1, 0($s0)
+	la $s2, 96($fp)
+	or $a0, $s2, $0
+	li $v0,1
+	syscall
+	la $s3, _StringLabel_0
+	or $a0, $s3, $0
+	li $v0,4
+	syscall
+	la $s4, 100($fp)
+	or $a0, $s4, $0
+	li $v0,1
+	syscall
+	la $s5, _StringLabel_0
+	or $a0, $s5, $0
+	li $v0,4
+	syscall
+	la $s6, 100($fp)
+	or $a0, $s6, $0
+	li $v0,1
+	syscall
+	la $s7, _StringLabel_0
+	or $a0, $s7, $0
+	li $v0,4
+	syscall
+	li $v0,10
+	syscall

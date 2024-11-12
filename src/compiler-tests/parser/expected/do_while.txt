@@ -1,0 +1,4 @@
+signed int (main(void)) {
+do (++a);
+while ((a<0));
+}

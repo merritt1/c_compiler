@@ -1,0 +1,7 @@
+unsigned int a;
+signed long int c;
+int main(void) {
+a + c;
+c + a;
+}
+

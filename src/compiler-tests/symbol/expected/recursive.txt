@@ -1,0 +1,8 @@
+=============== PARSE TREE ===============
+signed int (potato(void)) {
+(potato());
+}
+================= SYMBOLS ================
+Symbol Table ID: 0
+  potato -> function(signed int, [void])
+

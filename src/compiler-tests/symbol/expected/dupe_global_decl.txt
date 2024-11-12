@@ -1,0 +1,12 @@
+
+
+
+***ERROR: Redefinition of identifier 'a'
+
+
+=============== PARSE TREE ===============
+signed int (a), (*(a));
+================= SYMBOLS ================
+Symbol Table ID: 0
+  a -> signed int
+

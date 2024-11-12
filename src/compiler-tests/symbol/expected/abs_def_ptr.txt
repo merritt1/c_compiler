@@ -1,0 +1,11 @@
+=============== PARSE TREE ===============
+void (f(signed int (a[])));
+void (f(signed int (*(p)))) {
+}
+================= SYMBOLS ================
+Symbol Table ID: 0
+  f -> function(void, [pointer(signed int)])
+
+Symbol Table ID: 1
+  p -> pointer(signed int)
+

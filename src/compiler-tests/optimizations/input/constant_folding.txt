@@ -1,0 +1,18 @@
+void syscall_print_int(int integer);
+void syscall_print_string(char *string);
+int syscall_read_int(void);
+void syscall_read_string(char *buffer, int length);
+void syscall_exit(void);
+
+void main(void) {
+	int a;
+	a = 123+456;
+	a = 123-23;
+	a = -3;
+	a = -4*20;
+	a = 1 << 5;
+	a = 2 >> 1;
+	a = 7 & 3;
+	a = 8 | 3;
+	a = 1 + 3 + 6 / 2;
+}

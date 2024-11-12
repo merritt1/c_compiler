@@ -1,0 +1,9 @@
+int main(void) {
+    int a;
+    a = 1;
+    label1:
+    a = 2;
+    label1:
+    a = 3;
+    return 0;
+}

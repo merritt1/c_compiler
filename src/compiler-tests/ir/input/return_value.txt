@@ -1,0 +1,10 @@
+int functionName(void) {
+	int j;
+	j = 0;
+	return j;
+	j = 12;
+}
+void main(void) {
+	int i;
+	i = functionName();
+}

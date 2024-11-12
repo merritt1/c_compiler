@@ -1,0 +1,7 @@
+int myFunc(void);
+int myFunc(void) {
+    return;
+}
+int main(void) {
+    return myFunc;
+}

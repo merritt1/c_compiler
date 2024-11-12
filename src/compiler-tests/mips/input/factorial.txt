@@ -1,0 +1,33 @@
+void syscall_print_int(int integer);
+void syscall_print_string(char *string);
+int syscall_read_int(void);
+void syscall_read_string(char *buffer, int length);
+void syscall_exit(void);
+
+int factorial(int n);
+
+int main(void) {
+  int n, f;
+
+  syscall_print_string("Factorial of ");
+
+  n = syscall_read_int();
+
+  syscall_print_string(" equals ");
+
+  f = factorial(n);
+
+  syscall_print_int(f);
+
+  syscall_print_string("\n");
+
+  return 0;
+}
+
+int factorial(int n) {
+  if(n <= 1)
+    return 1;
+  else
+    return n*factorial(n-1);
+}
+

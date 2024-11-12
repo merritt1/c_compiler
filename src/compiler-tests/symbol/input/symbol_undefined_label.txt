@@ -1,0 +1,9 @@
+char b;
+int a(char f) {
+first: b;
+goto first;
+}
+short p(int asdf) {
+second: b++;
+goto secondlabel;
+}
